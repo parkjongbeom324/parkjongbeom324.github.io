@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PARK</title>
+    <meta http-equiv="refresh" content="5">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        header {
+            text-align: center;
+            width: auto;
+            height: 130px;
+            background-color: yellow;
+        }
+        
+        #logo {
+            margin: 10px;
+            margin-left: 100px;
+            border: solid 2px brown;
+            float: left;
+        }
+        
+        header li {
+            text-align: center;
+            margin-left: 50px;
+            font-size: 20px;
+            display: inline;
+            float: left;
+            margin-top: 45px;
+            margin-right: 60px;
+        }
+        
+        nav {
+            background-color: lightyellow;
+            text-align: center;
+            width: auto;
+            font-size: 60px;
+            border: solid 5px yellow;
+        }
+        
+        .GK {
+            background-color: #FAFAFA;
+            text-align: center;
+            width: 100%;
+            height: 90px;
+            font-size: 40px;
+            color: orange;
+        }
+        
+        .DF {
+            background-color: #FAFAFA;
+            text-align: center;
+            width: 100%;
+            height: 90px;
+            font-size: 40px;
+            color: green;
+        }
+        
+        .MF {
+            background-color: #FAFAFA;
+            text-align: center;
+            width: 100%;
+            height: 90px;
+            font-size: 40px;
+            color: blue;
+        }
+        
+        .FW {
+            background-color: #FAFAFA;
+            text-align: center;
+            width: 100%;
+            height: 90px;
+            font-size: 40px;
+            color: RED;
+        }
+        
+        .people {
+            margin-left: 50px;
+            margin-bottom: 50px;
+            border: solid 3px gainsboro;
+        }
+        
+        section {
+            text-align: center;
+            width: auto;
+            border-bottom: solid 5px yellow;
+            background-color: #FAFAFA;
+        }
+        /* aside {
+	float: left;
+	margin-top: 30px;
+	margin-left: 80px;
+	border: solid 10px #cccccc;
+}
+aside li {
+	margin-bottom: 70px;
+} */
+        
+        footer {
+            width: auto;
+            height: 80px;
+            border-top: solid 30px #cccccc;
+            margin-top: 10px;
+            margin-left: 10px;
+            border: solid 10px #cccccc;
+        }
+        
+        #address {
+            float: left;
+            margin: 30px 0 0 20px;
+        }
+        
+        #customer {
+            float: right;
+            margin: 30px 0 0 180px;
+            padding-right: 20px;
+        }
+        
+        #page {
+            width: 100%;
+        }
+    </style>
+    <script>
+        function a1() {
+            swal({
+                title: "1.마르코 템페라니",
+                text: "1:1 방어 : 16\n	골킥 : 18\n공 던지기 : 15\n공중 장악력 : 14\n기행 : 2\n돌진 : 8\n반사신경 : 17\n볼 핸들링 : 14\n수비조율 : 15\n패스 : 9\n 퍼스트 터치 : 8\n펀칭 : 8\n페널티 박스 장악력 : 14"
+            });
+        }
+
+        function a2() {
+            swal({
+                title: "25.안드레아스 보레니취",
+                text: "1:1 방어 : 16\n	골킥 : 10\n공 던지기 : 13\n공중 장악력 : 13\n기행 : 2\n돌진 : 7\n반사신경 : 17\n볼 핸들링 : 14\n수비조율 : 15\n패스 : 9\n 퍼스트 터치 : 12\n펀칭 : 12\n페널티 박스 장악력 : 12"
+            });
+        }
+
+        function a3() {
+            swal({
+                title: "5.외르겐 버스크",
+                text: "개인기 : 9\n드리블 : 10\n 일대일 마크 : 14\n 크로스 : 8\n패스 : 12\n 퍼스트 터치 : 12\n 태클 : 12\n 헤더 : 13\n수비 위치 : 14\n 몸싸움 : 13\n 주력 : 13\n 판단력 : 13\n 집중력 : 14"
+            });
+        }
+
+        function a4() {
+            swal({
+                title: "20.블라디미르 스토이치",
+                text: "개인기 : 15\n드리블 : 14\n 크로스 : 11\n패스 : 17\n퍼스트 터치 : 12\n오프더볼 : 15\n활동량 : 14\n 민첩성 : 20\n 순간속도 : 16\n주력 : 18\n지구력 : 13\n"
+            });
+        }
+
+        function a5() {
+            swal({
+                title: "14.후안 피냐레타",
+                text: "개인기 : 17\n패스 : 17\n퍼스트 터치 : 17\n오프더볼 : 14\n시야 : 20\n예측력 : 14\n 침착성 : 17\n팀워크 : 16\n판단력 : 17\n활동량 : 17\n균형 감각 : 19"
+            });
+        }
+
+        function a6() {
+            swal({
+                title: "2.리카르도 테스티",
+                text: "개인기 : 16\n드리블 : 13\n 일대일 마크 : 14\n 크로스 : 13\n패스 : 11\n 퍼스트 터치 : 12\n 태클 : 14\n 헤더 : 13\n수비 위치 : 13\n 몸싸움 : 14\n 주력 : 16\n 판단력 : 12\n 집중력 : 14"
+            });
+        }
+
+        function a7() {
+            swal({
+                title: "3.프리드리히 팻딘",
+                text: "개인기 : 11\n드리블 : 10\n 일대일 마크 : 16\n 크로스 : 7\n패스 : 10\n 퍼스트 터치 : 11\n 태클 : 19\n 헤더 : 14\n수비 위치 : 16\n 몸싸움 : 17\n 주력 : 13\n 판단력 : 16\n 집중력 : 18"
+            });
+        }
+
+        function a8() {
+            swal({
+                title: "4.리누스 토마스",
+                text: "개인기 : 14\n드리블 : 11\n 일대일 마크 : 14\n 크로스 : 17\n패스 : 17\n 퍼스트 터치 : 17\n 태클 : 15\n 헤더 : 14\n수비 위치 : 17\n 몸싸움 : 12\n 주력 : 15\n 판단력 : 18\n 집중력 : 16"
+            });
+        }
+
+        function a9() {
+            swal({
+                title: "6.워드 반 후프",
+                text: "개인기 : 11\n드리블 : 11\n 일대일 마크 : 15\n 크로스 : 14\n패스 : 14\n 퍼스트 터치 : 14\n 태클 : 14\n 헤더 : 12\n수비 위치 : 16\n 몸싸움 : 15\n 주력 : 14\n 판단력 : 16\n 집중력 : 17"
+            });
+        }
+
+        function a10() {
+            swal({
+                title: "31.후안마 카로",
+                text: "개인기 : 11\n드리블 : 9\n 일대일 마크 : 14\n 크로스 : 14\n패스 : 14\n 퍼스트 터치 : 14\n 태클 : 14\n 헤더 : 11\n수비 위치 : 17\n 몸싸움 : 13\n 주력 : 14\n 판단력 : 18\n 집중력 : 17"
+            });
+        }
+
+        function a11() {
+            swal({
+                title: "15.에밀턴 벨트램",
+                text: "개인기 : 13\n드리블 : 11\n 일대일 마크 : 14\n 크로스 : 9\n패스 : 12\n 퍼스트 터치 : 14\n 태클 : 16\n 헤더 : 11\n수비 위치 : 15\n 몸싸움 : 14\n 주력 : 15\n 판단력 : 15\n 집중력 : 14"
+            });
+        }
+
+        function a12() {
+            swal({
+                title: "10.마지드 나시리",
+                text: "개인기 : 17\n패스 : 15\n퍼스트 터치 : 14\n오프더볼 : 16\n시야 : 26\n예측력 : 15\n 침착성 : 15\n팀워크 : 15\n판단력 : 15\n활동량 : 13\n균형 감각 : 19"
+            });
+        }
+
+        function a13() {
+            swal({
+                title: "18.프랑크 마르케스",
+                text: "개인기 : 15\n패스 : 15\n퍼스트 터치 : 13\n오프더볼 : 11\n시야 : 10\n예측력 : 13\n 침착성 : 11\n팀워크 : 12\n판단력 : 16\n활동량 : 17\n균형 감각 : 17"
+            });
+        }
+
+        function a14() {
+            swal({
+                title: "8.베시르 아사니",
+                text: "개인기 : 15\n패스 : 16\n퍼스트 터치 : 18\n오프더볼 : 17\n시야 : 15\n예측력 : 16\n 침착성 : 18\n팀워크 : 14\n판단력 : 16\n활동량 : 14\n균형 감각 : 14"
+            });
+        }
+
+        function a15() {
+            swal({
+                title: "9.아일튼 장가",
+                text: "개인기 : 17\n패스 : 18\n퍼스트 터치 : 18\n오프더볼 : 15\n시야 : 14\n예측력 : 19\n 침착성 : 18\n팀워크 : 12\n판단력 : 18\n활동량 : 15\n균형 감각 : 17"
+            });
+        }
+
+        function a16() {
+            swal({
+                title: "45.외르겐 버스크",
+                text: "개인기 : 15\n골 결정력 : 19\n드리블 : 18\n패스 : 15\n퍼스트 터치 : 16\n오프더볼 : 15\n예측력 : 14\n침착성 : 15\n판단력 : 14\n활동량 : 17\n균형 감각 : 17\n 민첩성 : 18\n순간 속도 : 14\n주력 : 15\n지구력 : 16"
+            });
+        }
+
+        function a17() {
+            swal({
+                title: "40.미할리스 소크라투스",
+                text: "개인기 : 18\n골 결정력 : 16\n드리블 : 15\n패스 : 15퍼스트 터치 : 18\n오프더볼 : 18\n예측력 : 17\n침착성 : 17\n판단력 : 16\n활동량 : 15\n균형 감각 : 17\n 민첩성 : 18\n순간 속도 : 18\n주력 : 19\n지구력 : 14"
+            });
+        }
+
+        function a18() {
+            swal({
+                title: "11.파비우 실바",
+                text: "개인기 : 19\n골 결정력 : 17\n드리블 : 18\n패스 : 15\n퍼스트 터치 : 17\n오프더볼 : 18\n예측력 : 19\n침착성 : 18\n판단력 : 17\n활동량 : 17\n균형 감각 : 19\n 민첩성 : 18\n순간 속도 : 19\n주력 : 18\n지구력 : 18"
+            });
+        }
+
+        // function a19() {
+        //     swal({
+        //         title: "%d",
+        //         text: "qweqwe"
+        //     });
+        // }
+
+        // function a20() {
+        //     swal({
+        //         title: "%d",
+        //         text: "qweqwe"
+        //     });
+        // }
+    </script>
+</head>
+
+<body id="page">
+    <header>
+        <div id="logo">
+            <img src="./여행사/logo.png" width="100" height="90">
+        </div>
+        <div id="header li">
+            <ul>
+                <strong>
+        <li>[TEAM] NEWS</li>
+		<li>|</li>
+        <li>[TEAM] VIDEO</li>
+		<li>|</li>
+        <li>[TEAM] MATCH</li>
+		<li>|</li>
+        <li>EVENT</li>
+		<li>|</li>
+        <li>TICKET</li>
+		</strong>
+            </ul>
+    </header>
+    <div class="clear"> </div>
+    <nav>
+        <p>TEAM OF PARK</p>
+    </nav>
+    <!-- =========================================================== -->
+    <div class="GK">
+        <p>GK</P>
+    </div>
+    <div class="clear">
+    </div>
+    <SECTION>
+        <img src="여행사/1.png" class=people onclick="a1()" width="200" height="200">
+        <img src="여행사/2.png" class=people onclick="a2()" width="200" height="200">
+    </SECTION>
+    <div class="clear"></div>
+    <!-- =========================================================== -->
+    <div class="DF">
+        <p>DF</P>
+    </div>
+    <div class="clear">
+    </div>
+    <SECTION>
+        <img src="여행사/6.png" class=people onclick="a6()" width="200" height="200">
+        <img src="여행사/7.png" class=people onclick="a7()" width="200" height="200">
+        <img src="여행사/8.png" class=people onclick="a8()" width="200" height="200">
+        <img src="여행사/9.png" class=people onclick="a9()" width="200" height="200">
+        <img src="여행사/10.png" class=people onclick="a10()" width="200" height="200">
+        <img src="여행사/11.png" class=people onclick="a11()" width="200" height="200">
+        <img src="여행사/3.png" class=people onclick="a3()" width="200" height="200">
+    </SECTION>
+    <div class="clear"></div>
+    <!-- =========================================================== -->
+    <div class="MF">
+        <p>MF</P>
+    </div>
+    <div class="clear">
+    </div>
+    <SECTION>
+        <img src="여행사/4.png" class=people onclick="a4()" width="200" height="200">
+        <img src="여행사/5.png" class=people onclick="a5()" width="200" height="200">
+        <img src="여행사/12.png" class=people onclick="a12()" width="200" height="200">
+        <img src="여행사/13.png" class=people onclick="a13()" width="200" height="200">
+        <img src="여행사/14.png" class=people onclick="a14()" width="200" height="200">
+        <img src="여행사/15.png" class=people onclick="a15()" width="200" height="200">
+
+    </SECTION>
+    <div class="clear"></div>
+    <!-- =========================================================== -->
+    <div class="FW">
+        <p>FW</P>
+    </div>
+    <div class="clear">
+    </div>
+    <SECTION>
+        <img src="여행사/16.png" class=people onclick="a16()" width="200" height="200">
+        <img src="여행사/17.png" class=people onclick="a17()" width="200" height="200">
+        <img src="여행사/18.png" class=people onclick="a18()" width="200" height="200">
+        <!-- <img src="여행사/19.png" class=people onclick="a19()" width="200" height="200">
+        <img src="여행사/20.png" class=people onclick="a20()" width="200" height="200"> -->
+
+    </SECTION>
+    <div class="clear"></div>
+    <!-- =========================================================== -->
+    <footer>
+        <div id="address">
+            대표이사 : 홍길동 | 사업자 등록번호 123-456-7890 </div>
+        <div id="customer">
+            고객센터 : 1588-1234 </div>
+        <!-- =========================================================== -->
+    </footer>
+</body>
+
+</html>
